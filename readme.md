@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Effective date: October 14, 2025**
+**Effective date: October 17, 2025**
 
 LocalDev ("we", "our", or "the App") is a location simulation app that shows your location on a map and allows you to simulate GPS locations on your device for development and testing purposes.
 
@@ -309,6 +309,7 @@ We may update this Privacy Policy from time to time to reflect changes in:
 - Review the effective date at the top
 
 **Previous versions:**
+- October 14, 2025: v1.2.5 - Added UMP consent and revocation sections
 - October 9, 2025: Initial version
 
 ---
@@ -378,8 +379,8 @@ If you believe we are not complying with GDPR, you can lodge a complaint with yo
 
 ---
 
-**Last updated: October 14, 2025**
+**Last updated: October 17, 2025**
 
-**App Version: 1.2.5**
+**App Version: 1.2.6**
 
 **Package: com.localdev.app**
