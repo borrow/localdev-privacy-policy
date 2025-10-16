@@ -38,6 +38,10 @@ Cuando usas la versión gratuita de nuestra Aplicación con anuncios, Google AdM
 - **Si ACEPTAS anuncios personalizados**: Google usará tus datos para mostrar anuncios relevantes basados en tus intereses
 - **Si RECHAZAS anuncios personalizados**: Google seguirá mostrando anuncios, pero no serán personalizados
 
+**⚠️ IMPORTANTE: Rechazar el consentimiento NO elimina los anuncios**
+- Rechazar = Anuncios genéricos (sin personalización)
+- Para eliminar anuncios completamente → Compra "Eliminar Anuncios"
+
 Puedes cambiar tu elección de consentimiento en cualquier momento en: **Ajustes → Gestionar consentimiento de anuncios**
 
 ---
@@ -114,8 +118,13 @@ Cuando abras la Aplicación por primera vez en el EEE/UK, verás un diálogo de 
 
 **Puedes elegir:**
 - ✅ **Aceptar Todo**: Google AdMob mostrará anuncios personalizados basados en tus intereses
-- ❌ **Rechazar Todo**: Google AdMob solo mostrará anuncios no personalizados
+- ❌ **Rechazar Todo**: Google AdMob solo mostrará anuncios NO personalizados (seguirás viendo anuncios)
 - ⚙️ **Gestionar Opciones**: Elegir propósitos y proveedores específicos
+
+**⚠️ NOTA IMPORTANTE:**
+- **Rechazar** el consentimiento NO elimina los anuncios
+- Solo cambia el tipo de anuncios (de personalizados a genéricos)
+- **Para NO ver anuncios** → Compra "Eliminar Anuncios" en Ajustes
 
 ### 5.2 Cambiar Tu Elección
 Puedes cambiar tu consentimiento en cualquier momento:
