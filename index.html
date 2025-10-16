@@ -259,12 +259,12 @@
         async function loadContent() {
             try {
                 // Load English version
-                const responseEn = await fetch('PRIVACY_POLICY.md');
+                const responseEn = await fetch('readme.md');
                 const textEn = await responseEn.text();
                 document.getElementById('content-en').innerHTML = convertMarkdownToHTML(textEn);
                 
                 // Load Spanish version
-                const responseEs = await fetch('PRIVACY_POLICY_ES.md');
+                const responseEs = await fetch('readme_es.md');
                 const textEs = await responseEs.text();
                 document.getElementById('content-es').innerHTML = convertMarkdownToHTML(textEs);
                 
