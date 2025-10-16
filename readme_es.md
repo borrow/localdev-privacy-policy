@@ -1,6 +1,6 @@
 # Política de Privacidad
 
-**Fecha de vigencia: 14 de octubre de 2025**
+**Fecha de vigencia: 17 de octubre de 2025**
 
 LocalDev ("nosotros", "nuestro" o "la Aplicación") es una aplicación de simulación de ubicación que muestra tu ubicación en un mapa y te permite simular ubicaciones GPS en tu dispositivo para fines de desarrollo y prueba.
 
@@ -310,6 +310,7 @@ Podemos actualizar esta Política de Privacidad de vez en cuando para reflejar c
 - Verifica la fecha de vigencia en la parte superior
 
 **Versiones anteriores:**
+- 14 de octubre de 2025: v1.2.5 - Añadidas secciones de consentimiento UMP y revocación
 - 9 de octubre de 2025: Versión inicial
 
 ---
@@ -379,8 +380,8 @@ Si crees que no estamos cumpliendo con el RGPD, puedes presentar una queja ante 
 
 ---
 
-**Última actualización: 14 de octubre de 2025**
+**Última actualización: 17 de octubre de 2025**
 
-**Versión de la Aplicación: 1.2.5**
+**Versión de la Aplicación: 1.2.6**
 
 **Paquete: com.localdev.app**
