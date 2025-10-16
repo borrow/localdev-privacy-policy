@@ -38,6 +38,10 @@ When you use the free version of our App with ads, Google AdMob may collect:
 - **If you ACCEPT personalized ads**: Google will use your data to show relevant ads based on your interests
 - **If you REJECT personalized ads**: Google will still show ads, but they won't be personalized
 
+**⚠️ IMPORTANT: Rejecting consent does NOT remove ads**
+- Rejecting = Generic ads (without personalization)
+- To remove ads completely → Purchase "Remove Ads"
+
 You can change your consent choice at any time in: **Settings → Manage ad consent**
 
 ---
@@ -114,8 +118,13 @@ When you first open the App in the EEA/UK, you will see a consent dialog asking 
 
 **You can choose:**
 - ✅ **Accept All**: Google AdMob will show personalized ads based on your interests
-- ❌ **Reject All**: Google AdMob will show non-personalized ads only
+- ❌ **Reject All**: Google AdMob will show NON-personalized ads only (you will still see ads)
 - ⚙️ **Manage Options**: Choose specific purposes and vendors
+
+**⚠️ IMPORTANT NOTE:**
+- **Rejecting** consent does NOT remove ads
+- It only changes the type of ads (from personalized to generic)
+- **To NOT see ads** → Purchase "Remove Ads" in Settings
 
 ### 5.2 Changing Your Choice
 You can change your consent at any time:
