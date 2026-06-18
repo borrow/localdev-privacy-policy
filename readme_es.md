@@ -1,6 +1,6 @@
 # Política de Privacidad
 
-**Fecha de vigencia: 18 de octubre de 2025**
+**Fecha de vigencia: 18 de junio de 2026**
 
 LocalDev ("nosotros", "nuestro" o "la Aplicación") es una aplicación de simulación de ubicación que muestra tu ubicación en un mapa y te permite simular ubicaciones GPS en tu dispositivo para fines de desarrollo y prueba.
 
@@ -12,7 +12,6 @@ Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos tu i
 
 ### 1.1 Información que Proporcionas
 - **Configuración de Ubicación Simulada**: Cuando activas la simulación de ubicación, esta información se almacena localmente solo en tu dispositivo.
-- **Estado de Compra In-App**: Si compras la función "Eliminar Anuncios", almacenamos una bandera local en tu dispositivo que indica que no se deben mostrar anuncios.
 
 ### 1.2 Información Recopilada Automáticamente
 - **Datos de Ubicación**: 
@@ -23,6 +22,8 @@ Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos tu i
   - Tipo de dispositivo, versión del sistema operativo
   - Versión de la aplicación y estadísticas de uso
   - ID de Publicidad de Google (para servicio de anuncios, si consientes)
+  - Identificador de instancia de la app, eventos de uso y diagnóstico (Firebase Analytics, solo si consientes — ver Sección 2.3)
+  - Diagnósticos de fallos y estabilidad (Firebase Crashlytics, solo si consientes)
 
 ### 1.3 Recopilación de Datos por Terceros
 
@@ -35,14 +36,25 @@ Cuando usas la versión gratuita de nuestra Aplicación con anuncios, Google AdM
 - Información del dispositivo y red
 
 **La recopilación de datos depende de tu consentimiento:**
-- **Si ACEPTAS anuncios personalizados**: Google usará tus datos para mostrar anuncios relevantes basados en tus intereses
-- **Si RECHAZAS anuncios personalizados**: Google seguirá mostrando anuncios, pero no serán personalizados
+- **Si ACEPTAS anuncios**: Google mostrará anuncios (personalizados o genéricos, según las opciones que aceptes) y procesará los datos en consecuencia
+- **Si RECHAZAS el consentimiento**: no se solicitan ni se muestran anuncios
 
-**⚠️ IMPORTANTE: Rechazar el consentimiento NO elimina los anuncios**
-- Rechazar = Anuncios genéricos (sin personalización)
-- Para eliminar anuncios completamente → Compra "Eliminar Anuncios"
+**⚠️ IMPORTANTE: Rechazar el consentimiento pone la Aplicación en modo básico**
+- Sin consentimiento de anuncios, la Aplicación funciona sin anuncios y sin la función de ubicación simulada
+- Puedes aceptar los anuncios más tarde desde Ajustes para desbloquear todas las funciones
 
 Puedes cambiar tu elección de consentimiento en cualquier momento en: **Ajustes → Gestionar consentimiento de anuncios**
+
+**Google Firebase (Analytics y Crashlytics)**
+
+Cuando la recopilación de datos está activada (solo si has consentido los anuncios — ver Sección 2.3), Google Firebase puede recopilar:
+- Un identificador de instancia de la app y el ID de Publicidad de Google
+- Eventos de uso e interacción (pantallas vistas, funciones utilizadas)
+- Diagnósticos técnicos y de fallos (modelo de dispositivo, versión del SO, versión de la app, trazas de error)
+
+**La recopilación de datos de Firebase depende de tu consentimiento:**
+- **Si ACEPTAS anuncios**: se activan Firebase Analytics y Crashlytics para entender el uso y corregir fallos
+- **Si RECHAZAS el consentimiento (modo básico)**: Firebase Analytics y Crashlytics quedan desactivados y no se recopilan datos de analítica ni de fallos
 
 ---
 
@@ -52,15 +64,19 @@ Puedes cambiar tu elección de consentimiento en cualquier momento en: **Ajustes
 - Mostrar tu ubicación en el mapa
 - Habilitar la simulación de ubicación GPS
 - Recordar tus preferencias (configuración de ubicación simulada)
-- Procesar compras in-app para eliminar anuncios
 
 ### 2.2 Publicidad (Solo Versión Gratuita)
 - Mostrar anuncios de banner e intersticiales a través de Google AdMob
 - Medir el rendimiento de los anuncios
 - Servir anuncios personalizados o no personalizados según tu consentimiento
 
-### 2.3 Analítica
-No usamos servicios de analítica. Cualquier dato analítico recopilado es únicamente por Google AdMob para fines de medición de anuncios.
+### 2.3 Analítica e Informes de Fallos
+Usamos **Google Firebase Analytics** y **Firebase Crashlytics** para entender cómo se usa la Aplicación y para detectar y corregir fallos y problemas de estabilidad.
+
+- Esta recopilación está **desactivada por defecto** y solo se activa **después de que aceptes los anuncios**.
+- En modo básico (consentimiento rechazado), Firebase Analytics y Crashlytics permanecen desactivados y no se recopilan datos de analítica ni de fallos.
+- También usamos Firebase Remote Config para gestionar la configuración de la app; no recopila información personal.
+- Usamos esta información solo de forma agregada para mejorar la Aplicación. No la usamos para identificarte personalmente.
 
 ---
 
@@ -80,16 +96,17 @@ Nuestra Aplicación integra los siguientes servicios de terceros:
 - **Política de Privacidad**: https://wiki.osmfoundation.org/wiki/Privacy_Policy
 - **Nota**: Los servidores de mapas reciben tu dirección IP al descargar imágenes de mapas
 
-### 3.3 Nominatim (Geocodificación)
+### 3.3 Photon de Komoot (Geocodificación)
 - **Propósito**: Búsqueda de direcciones y geocodificación inversa
 - **Datos Recopilados**: Consultas de búsqueda, coordenadas, dirección IP
-- **Política de Privacidad**: https://operations.osmfoundation.org/policies/nominatim/
-- **Nota**: Tus búsquedas se envían a los servidores de Nominatim para encontrar direcciones
+- **Política de Privacidad**: https://www.komoot.com/privacy
+- **Nota**: Tus búsquedas se envían a los servidores de Photon (photon.komoot.io) para encontrar direcciones
 
-### 3.4 Google Play Services
-- **Propósito**: Compras in-app, anuncios, funcionalidad de mapas
-- **Datos Recopilados**: Historial de compras, información de pago (procesada por Google)
-- **Política de Privacidad**: https://policies.google.com/privacy
+### 3.4 Google Firebase (Analytics, Crashlytics y Remote Config)
+- **Propósito**: Analítica de uso, informes de fallos/estabilidad y configuración remota
+- **Datos Recopilados**: Identificador de instancia de la app, ID de Publicidad de Google, eventos de uso, diagnósticos del dispositivo y de fallos
+- **Política de Privacidad**: https://firebase.google.com/support/privacy
+- **Nota**: La recopilación solo se activa cuando aceptas los anuncios; está desactivada en modo básico
 
 ---
 
@@ -118,13 +135,12 @@ Cuando abras la Aplicación por primera vez en el EEE/UK, verás un diálogo de 
 
 **Puedes elegir:**
 - ✅ **Aceptar Todo**: Google AdMob mostrará anuncios personalizados basados en tus intereses
-- ❌ **Rechazar Todo**: Google AdMob solo mostrará anuncios NO personalizados (seguirás viendo anuncios)
-- ⚙️ **Gestionar Opciones**: Elegir propósitos y proveedores específicos
+- ⚙️ **Gestionar Opciones**: elegir propósitos y proveedores específicos; pueden mostrarse anuncios sin personalización según lo que aceptes
+- ❌ **Rechazar Todo**: no se mostrarán anuncios
 
 **⚠️ NOTA IMPORTANTE:**
-- **Rechazar** el consentimiento NO elimina los anuncios
-- Solo cambia el tipo de anuncios (de personalizados a genéricos)
-- **Para NO ver anuncios** → Compra "Eliminar Anuncios" en Ajustes
+- Si no consientes los anuncios, la Aplicación funciona en modo básico sin anuncios y sin la función de ubicación simulada
+- Puedes aceptar los anuncios más tarde desde Ajustes para desbloquear todas las funciones
 
 ### 5.2 Cambiar Tu Elección
 Puedes cambiar tu consentimiento en cualquier momento:
@@ -165,12 +181,6 @@ Visita: https://myadcenter.google.com/
 **Enlace de Revocación para AdMob:**
 https://borrow.github.io/localdev-privacy-policy/#revocar-consentimiento
 
-### 5.3 Eliminar Anuncios Completamente
-Puedes comprar la función **"Eliminar Anuncios"** por un pago único. Después de la compra:
-- ✅ Todos los anuncios se eliminan permanentemente
-- ✅ El botón "Gestionar consentimiento de anuncios" se oculta
-- ✅ Google AdMob deja de recopilar datos relacionados con anuncios
-
 ---
 
 ## 6. Compartir Datos y Transferencias
@@ -180,9 +190,9 @@ No vendemos, alquilamos ni intercambiamos tu información personal con terceros.
 
 ### 6.2 Compartir con Terceros
 Compartimos datos con:
-- **Google AdMob**: Para servicio de anuncios y medición (solo si usas la versión gratuita)
-- **Google Play Services**: Para compras in-app
-- **OpenStreetMap/Nominatim**: Para mapas y geocodificación
+- **Google AdMob**: Para servicio de anuncios y medición
+- **Google Firebase**: Para analítica de uso e informes de fallos (solo con consentimiento)
+- **OpenStreetMap/Photon**: Para mapas y geocodificación
 
 ### 6.3 Transferencias Internacionales
 Algunos servicios de terceros (ej. Google) pueden transferir tus datos a países fuera del EEE/UK, incluidos Estados Unidos. Estas transferencias están protegidas por:
@@ -196,12 +206,11 @@ Algunos servicios de terceros (ej. Google) pueden transferir tus datos a países
 
 ### 7.1 Datos que Almacenamos Localmente
 - **Configuración de ubicación simulada**: Almacenado en tu dispositivo hasta que desinstalas la aplicación
-- **Estado de compra**: Almacenado localmente en tu dispositivo y en Google Play Billing
 
 ### 7.2 Retención por Terceros
 - **Google AdMob**: Retiene datos de anuncios según su política de privacidad (típicamente 2-3 meses para la mayoría de los datos)
+- **Google Firebase**: Retiene datos de analítica y fallos según las políticas de Google; la retención de datos de analítica es configurable (por defecto hasta 14 meses)
 - **OpenStreetMap**: Retiene registros del servidor temporalmente para fines de seguridad
-- **Google Play**: Retiene historial de compras según sus políticas
 
 ### 7.3 Eliminar Tus Datos
 Para eliminar todos los datos de la aplicación:
@@ -310,6 +319,7 @@ Podemos actualizar esta Política de Privacidad de vez en cuando para reflejar c
 - Verifica la fecha de vigencia en la parte superior
 
 **Versiones anteriores:**
+- 18 de junio de 2026: v1.33 - Añadida divulgación de Firebase Analytics y Crashlytics (sujeto a consentimiento)
 - 17 de octubre de 2025: v1.2.6 - Fix crítico de persistencia de consentimiento
 - 14 de octubre de 2025: v1.2.5 - Añadidas secciones de consentimiento UMP y revocación
 - 9 de octubre de 2025: Versión inicial
@@ -362,6 +372,7 @@ Si crees que no estamos cumpliendo con el RGPD, puedes presentar una queja ante 
 - ✅ Datos de ubicación (procesados en el dispositivo, no enviados a nuestros servidores)
 - ✅ Identificadores del dispositivo (para anuncios, solo si consientes)
 - ✅ Datos de interacción con anuncios (para anuncios, solo si usas la versión gratuita)
+- ✅ Analítica de uso y diagnósticos de fallos (Firebase, solo si consientes)
 
 **Cómo lo usamos:**
 - ✅ Para mostrar tu ubicación en el mapa
@@ -371,7 +382,6 @@ Si crees que no estamos cumpliendo con el RGPD, puedes presentar una queja ante 
 **Tus opciones:**
 - ✅ Aceptar o rechazar anuncios personalizados
 - ✅ Cambiar tu consentimiento en cualquier momento en Ajustes
-- ✅ Eliminar anuncios completamente con una compra única
 - ✅ Desinstalar la aplicación para eliminar todos los datos locales
 
 **NO hacemos:**
@@ -381,8 +391,8 @@ Si crees que no estamos cumpliendo con el RGPD, puedes presentar una queja ante 
 
 ---
 
-**Última actualización: 18 de octubre de 2025**
+**Última actualización: 18 de junio de 2026**
 
-**Versión de la Aplicación: 1.2.7**
+**Versión de la Aplicación: 1.33**
 
 **Paquete: com.localdev.app**

@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Effective date: October 18, 2025**
+**Effective date: June 18, 2026**
 
 LocalDev ("we", "our", or "the App") is a location simulation app that shows your location on a map and allows you to simulate GPS locations on your device for development and testing purposes.
 
@@ -12,7 +12,6 @@ This Privacy Policy explains how we collect, use, and protect your information w
 
 ### 1.1 Information You Provide
 - **Mock Location Settings**: When you enable location simulation, this information is stored locally on your device only.
-- **In-App Purchase Status**: If you purchase the "Remove Ads" feature, we store a local flag on your device indicating that ads should not be shown.
 
 ### 1.2 Automatically Collected Information
 - **Location Data**: 
@@ -23,6 +22,8 @@ This Privacy Policy explains how we collect, use, and protect your information w
   - Device type, operating system version
   - App version and usage statistics
   - Google Advertising ID (for ad serving, if you consent)
+  - App instance identifier, usage and diagnostic events (Firebase Analytics, only if you consent — see Section 2.3)
+  - Crash and stability diagnostics (Firebase Crashlytics, only if you consent)
 
 ### 1.3 Third-Party Data Collection
 
@@ -35,14 +36,25 @@ When you use the free version of our App with ads, Google AdMob may collect:
 - Device and network information
 
 **Data collection depends on your consent:**
-- **If you ACCEPT personalized ads**: Google will use your data to show relevant ads based on your interests
-- **If you REJECT personalized ads**: Google will still show ads, but they won't be personalized
+- **If you ACCEPT ads**: Google will show ads (personalized or generic, depending on the options you accept) and process data accordingly
+- **If you REJECT consent**: no ads are requested or shown
 
-**⚠️ IMPORTANT: Rejecting consent does NOT remove ads**
-- Rejecting = Generic ads (without personalization)
-- To remove ads completely → Purchase "Remove Ads"
+**⚠️ IMPORTANT: Rejecting consent puts the App in basic mode**
+- Without ad consent, the App runs without ads and without the mock-location feature
+- You can accept ads later from Settings to unlock full features
 
 You can change your consent choice at any time in: **Settings → Manage ad consent**
+
+**Google Firebase (Analytics & Crashlytics)**
+
+When data collection is enabled (only when you have consented to ads — see Section 2.3), Google Firebase may collect:
+- An app instance identifier and Google Advertising ID
+- Usage and interaction events (screens viewed, features used)
+- Technical and crash diagnostics (device model, OS version, app version, stack traces)
+
+**Firebase data collection depends on your consent:**
+- **If you ACCEPT ads**: Firebase Analytics and Crashlytics are enabled to help us understand usage and fix crashes
+- **If you REJECT consent (basic mode)**: Firebase Analytics and Crashlytics are disabled and no analytics or crash data is collected
 
 ---
 
@@ -52,15 +64,19 @@ You can change your consent choice at any time in: **Settings → Manage ad cons
 - Display your location on the map
 - Enable GPS location simulation
 - Remember your preferences (mock location settings)
-- Process in-app purchases to remove ads
 
 ### 2.2 Advertising (Free Version Only)
 - Display banner and interstitial ads via Google AdMob
 - Measure ad performance
 - Serve personalized or non-personalized ads based on your consent
 
-### 2.3 Analytics
-We do not use analytics services. Any analytics data collected is solely by Google AdMob for ad measurement purposes.
+### 2.3 Analytics and Crash Reporting
+We use **Google Firebase Analytics** and **Firebase Crashlytics** to understand how the App is used and to detect and fix crashes and stability issues.
+
+- This data collection is **disabled by default** and is only enabled **after you consent to ads**.
+- In basic mode (consent rejected), Firebase Analytics and Crashlytics remain disabled and no analytics or crash data is collected.
+- We also use Firebase Remote Config to manage app configuration; it does not collect personal information.
+- We use this information only in aggregate to improve the App. We do not use it to identify you personally.
 
 ---
 
@@ -80,16 +96,17 @@ Our App integrates the following third-party services:
 - **Privacy Policy**: https://wiki.osmfoundation.org/wiki/Privacy_Policy
 - **Note**: Tile servers receive your IP address when downloading map images
 
-### 3.3 Nominatim (Geocoding)
+### 3.3 Photon by Komoot (Geocoding)
 - **Purpose**: Address search and reverse geocoding
 - **Data Collected**: Search queries, coordinates, IP address
-- **Privacy Policy**: https://operations.osmfoundation.org/policies/nominatim/
-- **Note**: Your search queries are sent to Nominatim servers to find addresses
+- **Privacy Policy**: https://www.komoot.com/privacy
+- **Note**: Your search queries are sent to Photon servers (photon.komoot.io) to find addresses
 
-### 3.4 Google Play Services
-- **Purpose**: In-app purchases, ads, maps functionality
-- **Data Collected**: Purchase history, payment information (processed by Google)
-- **Privacy Policy**: https://policies.google.com/privacy
+### 3.4 Google Firebase (Analytics, Crashlytics & Remote Config)
+- **Purpose**: Usage analytics, crash/stability reporting, and remote configuration
+- **Data Collected**: App instance identifier, Google Advertising ID, usage events, device and crash diagnostics
+- **Privacy Policy**: https://firebase.google.com/support/privacy
+- **Note**: Collection is enabled only when you consent to ads; it is disabled in basic mode
 
 ---
 
@@ -118,13 +135,12 @@ When you first open the App in the EEA/UK, you will see a consent dialog asking 
 
 **You can choose:**
 - ✅ **Accept All**: Google AdMob will show personalized ads based on your interests
-- ❌ **Reject All**: Google AdMob will show NON-personalized ads only (you will still see ads)
-- ⚙️ **Manage Options**: Choose specific purposes and vendors
+- ⚙️ **Manage Options**: choose specific purposes and vendors; ads may be shown without personalization depending on what you accept
+- ❌ **Reject All**: no ads will be shown
 
 **⚠️ IMPORTANT NOTE:**
-- **Rejecting** consent does NOT remove ads
-- It only changes the type of ads (from personalized to generic)
-- **To NOT see ads** → Purchase "Remove Ads" in Settings
+- If you do not consent to ads, the App runs in a basic mode without ads and without the mock-location feature
+- You can accept ads later from Settings to unlock full features
 
 ### 5.2 Changing Your Choice
 You can change your consent at any time:
@@ -165,12 +181,6 @@ Visit: https://myadcenter.google.com/
 **Revocation Link for AdMob:**
 https://borrow.github.io/localdev-privacy-policy/#revoke-consent
 
-### 5.3 Removing Ads Completely
-You can purchase the **"Remove Ads"** feature for a one-time payment. After purchase:
-- ✅ All ads are permanently removed
-- ✅ The "Manage ad consent" button is hidden
-- ✅ Google AdMob stops collecting ad-related data
-
 ---
 
 ## 6. Data Sharing and Transfers
@@ -180,9 +190,9 @@ We do not sell, rent, or trade your personal information to third parties.
 
 ### 6.2 Third-Party Sharing
 We share data with:
-- **Google AdMob**: For ad serving and measurement (only if you use the free version)
-- **Google Play Services**: For in-app purchases
-- **OpenStreetMap/Nominatim**: For map tiles and geocoding
+- **Google AdMob**: For ad serving and measurement
+- **Google Firebase**: For usage analytics and crash reporting (only with consent)
+- **OpenStreetMap/Photon**: For map tiles and geocoding
 
 ### 6.3 International Transfers
 Some third-party services (e.g., Google) may transfer your data to countries outside the EEA/UK, including the United States. These transfers are protected by:
@@ -196,12 +206,11 @@ Some third-party services (e.g., Google) may transfer your data to countries out
 
 ### 7.1 Data We Store Locally
 - **Mock location settings**: Stored on your device until you uninstall the app
-- **Purchase status**: Stored locally on your device and in Google Play Billing
 
 ### 7.2 Third-Party Retention
 - **Google AdMob**: Retains ad data according to their privacy policy (typically 2-3 months for most data)
+- **Google Firebase**: Retains analytics and crash data according to Google's policies; analytics data retention can be configured (default up to 14 months)
 - **OpenStreetMap**: Retains server logs temporarily for security purposes
-- **Google Play**: Retains purchase history per their policies
 
 ### 7.3 Deleting Your Data
 To delete all app data:
@@ -309,6 +318,7 @@ We may update this Privacy Policy from time to time to reflect changes in:
 - Review the effective date at the top
 
 **Previous versions:**
+- June 18, 2026: v1.33 - Added Firebase Analytics & Crashlytics disclosure (consent-gated)
 - October 17, 2025: v1.2.6 - Critical consent persistence fix
 - October 14, 2025: v1.2.5 - Added UMP consent and revocation sections
 - October 9, 2025: Initial version
@@ -361,6 +371,7 @@ If you believe we are not complying with GDPR, you can lodge a complaint with yo
 - ✅ Location data (processed on-device, not sent to our servers)
 - ✅ Device identifiers (for ads, only if you consent)
 - ✅ Ad interaction data (for ads, only if you use the free version)
+- ✅ Usage analytics and crash diagnostics (Firebase, only if you consent)
 
 **How we use it:**
 - ✅ To show your location on the map
@@ -370,7 +381,6 @@ If you believe we are not complying with GDPR, you can lodge a complaint with yo
 **Your choices:**
 - ✅ Accept or reject personalized ads
 - ✅ Change your consent at any time in Settings
-- ✅ Remove ads completely with a one-time purchase
 - ✅ Uninstall the app to delete all local data
 
 **We do NOT:**
@@ -380,8 +390,8 @@ If you believe we are not complying with GDPR, you can lodge a complaint with yo
 
 ---
 
-**Last updated: October 18, 2025**
+**Last updated: June 18, 2026**
 
-**App Version: 1.2.7**
+**App Version: 1.33**
 
 **Package: com.localdev.app**
